@@ -1,0 +1,104 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="StudentManagementProject.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <Grid x:Name="TitlePanel" 
+                    Grid.Row="0" 
+                    Margin="12,17,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!-- Navigate Language Bar -->
+            <StackPanel Orientation="Horizontal"
+                        Grid.Row="0"
+                        Height="20"
+                        Visibility="Collapsed">
+                <Grid Width="30">
+                    <Image
+                        Source="/Assets/vn_flag.png"
+                        Stretch="Fill"/>
+                </Grid>
+                <Grid Margin="10, 0, 10, 0"/>
+                <Grid Width="30">
+                    <Image
+                        Source="/Assets/eng_flag.png"
+                        Stretch="Fill"/>
+                </Grid>
+            </StackPanel>
+            <!-- End Navigate Language Bar -->
+            <TextBlock 
+                    x:Name="loginTitle"
+                    Grid.Row="1"
+                    Style="{StaticResource PhoneTextTitle1Style}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Text="Login"
+                    Foreground="Black"/>
+        </Grid>
+
+        <!-- Input Fields -->
+        <Grid Grid.Row="1" Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="txtUserName"
+                     TextAlignment="Center"
+                     GotFocus="txtUserName_GotFocus"
+                     VerticalAlignment="Center"
+                     Background="#33bbbbbb"
+                     Padding="0,20,0,20"
+                     Text="username"/>
+            
+            <TextBox x:Name="txtPassword" Grid.Row="1"
+                     TextAlignment="Center"
+                     GotFocus="txtPassword_GotFocus"
+                     VerticalAlignment="Top"
+                     Background="#33bbbbbb"
+                     Padding="0,20,0,20"
+                     Margin="0,-30,0,0"
+                     Text="password"/>
+        
+            <Button
+                    x:Name="btnLogin"
+                    Grid.Row="2"
+                    VerticalAlignment="Top"
+                    Content="Login"
+                    Padding="0,20,0,20"
+                    Margin="0,-70,0,0"
+                    Background="#FF0092C9"
+                    Click="btnLogin_Click"/>
+            
+            <TextBlock
+                    x:Name="navRegis"
+                    Grid.Row="3"
+                    HorizontalAlignment="Center"
+                    Text="Register new account?" Foreground="#FF0074FF" TextDecorations="Underline"
+                    Tap="navRegis_Tap"/>
+
+        </Grid>
+    </Grid>
+    
+</phone:PhoneApplicationPage>

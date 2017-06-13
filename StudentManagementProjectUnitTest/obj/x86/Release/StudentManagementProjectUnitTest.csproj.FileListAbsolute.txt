@@ -1,0 +1,57 @@
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Assets\ApplicationIcon.png
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\StudentManagementProjectUnitTest.dll
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\StudentManagementProjectUnitTest.pdb
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\AppManifest.xaml
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Properties\WMAppManifest.xml
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\StudentManagementProjectUnitTest_Release_x86.xap
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Microsoft.VisualStudio.TestPlatform.Core.dll
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Microsoft.VisualStudio.TestPlatform.TestExecutor.Core.dll
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Microsoft.VisualStudio.TestPlatform.UnitTestFramework.dll
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\vstest_executionengine_platformbridge.winmd
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\App.g.cs
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\MainPage.g.cs
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.g.resources
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.Resources.AppResources.resources
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.csproj.GenerateResource.Cache
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.dll
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.pdb
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\XapCacheFile.xml
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Assets\Tiles\IconicTileSmall.png
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\StudentManagementProject.dll
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\StudentManagementProject.pdb
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Sqlite.winmd
+C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Sqlite.dll
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Assets\ApplicationIcon.png
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Assets\Tiles\FlipCycleTileLarge.png
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Assets\Tiles\FlipCycleTileMedium.png
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Assets\Tiles\FlipCycleTileSmall.png
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Assets\Tiles\IconicTileMediumLarge.png
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Assets\Tiles\IconicTileSmall.png
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\StudentManagementProjectUnitTest.dll
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\StudentManagementProjectUnitTest.pdb
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\AppManifest.xaml
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Properties\WMAppManifest.xml
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\StudentManagementProjectUnitTest_Release_x86.xap
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Microsoft.VisualStudio.TestPlatform.Core.dll
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Microsoft.VisualStudio.TestPlatform.TestExecutor.Core.dll
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Microsoft.VisualStudio.TestPlatform.UnitTestFramework.dll
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\vstest_executionengine_platformbridge.winmd
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\StudentManagementProject.dll
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Sqlite.winmd
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\StudentManagementProject.pdb
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\Sqlite.dll
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Release\vi-VN\StudentManagementProject.resources.dll
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.csprojResolveAssemblyReference.cache
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\App.g.cs
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\MainPage.g.cs
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.g.resources
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.Resources.AppResources.resources
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.csproj.GenerateResource.Cache
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.dll
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.pdb
+D:\projects\mobile\wp\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Release\XapCacheFile.xml

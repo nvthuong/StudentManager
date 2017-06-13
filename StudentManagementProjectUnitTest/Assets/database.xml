@@ -1,0 +1,212 @@
+<School>
+	<Class name="1A">
+		<Student name="John Job" img="test4.png" gender="Male"/>
+		<Student name="Timmy Goldberg" img="test5.png" gender="Male"/>
+		<Student name="Paul Kardishan" img="test5.png" gender="Male"/>
+		<Student name="Bill Cruises" img="test10.png" gender="Male"/>
+		<Student name="Shane Henry" img="test2.png" gender="Female"/>
+	</Class>
+	<Class name="1B">
+		<Student name="Mark Heyman" img="test4.png" gender="Female"/>
+		<Student name="Tom Johnson" img="test10.png" gender="Female"/>
+		<Student name="Mark Job" img="test4.png" gender="Male"/>
+		<Student name="Bill Morrison" img="test9.png" gender="Female"/>
+		<Student name="Shane Cena" img="test3.png" gender="Male"/>
+	</Class>
+	<Class name="1C">
+		<Student name="Tom Austin" img="test6.png" gender="Female"/>
+		<Student name="Jeff Gate" img="test10.png" gender="Male"/>
+		<Student name="Steve Job" img="test8.png" gender="Male"/>
+		<Student name="Timmy Morrison" img="test2.png" gender="Male"/>
+		<Student name="John Lesnar" img="test8.png" gender="Male"/>
+	</Class>
+	<Class name="1D">
+		<Student name="Steve Gate" img="test10.png" gender="Female"/>
+		<Student name="Timmy Austin" img="test1.png" gender="Male"/>
+		<Student name="Steve Job" img="test10.png" gender="Female"/>
+		<Student name="Timmy Gate" img="test5.png" gender="Female"/>
+		<Student name="John Cena" img="test10.png" gender="Male"/>
+	</Class>
+	<Class name="1E">
+		<Student name="Timmy Kardishan" img="test2.png" gender="Female"/>
+		<Student name="Paul Morrison" img="test9.png" gender="Female"/>
+		<Student name="Paul McMahon" img="test5.png" gender="Male"/>
+		<Student name="Brock Austin" img="test10.png" gender="Female"/>
+		<Student name="Bill Cruises" img="test2.png" gender="Male"/>
+	</Class>
+	<Class name="1F">
+		<Student name="Bill Cruises" img="test5.png" gender="Female"/>
+		<Student name="Kim Lesnar" img="test2.png" gender="Male"/>
+		<Student name="Timmy Heyman" img="test9.png" gender="Male"/>
+		<Student name="Steve Goldberg" img="test5.png" gender="Female"/>
+		<Student name="Dawney Goldberg" img="test6.png" gender="Female"/>
+	</Class>
+	<Class name="2A">
+		<Student name="Steve Henry" img="test4.png" gender="Female"/>
+		<Student name="Bill Henry" img="test10.png" gender="Male"/>
+		<Student name="Brock Johnson" img="test8.png" gender="Male"/>
+		<Student name="Maria Heyman" img="test3.png" gender="Male"/>
+		<Student name="Dawney Morrison" img="test2.png" gender="Female"/>
+	</Class>
+	<Class name="2B">
+		<Student name="Kim Lesnar" img="test6.png" gender="Male"/>
+		<Student name="Timmy Kardishan" img="test1.png" gender="Male"/>
+		<Student name="Tom Austin" img="test4.png" gender="Male"/>
+		<Student name="Mark McMahon" img="test1.png" gender="Female"/>
+		<Student name="Jeff Ozawa" img="test9.png" gender="Female"/>
+	</Class>
+	<Class name="2C">
+		<Student name="Maria Henry" img="test2.png" gender="Male"/>
+		<Student name="Maria McMahon" img="test7.png" gender="Female"/>
+		<Student name="Bill Cena" img="test5.png" gender="Female"/>
+		<Student name="Dawney Job" img="test8.png" gender="Female"/>
+		<Student name="Kim Ozawa" img="test5.png" gender="Female"/>
+	</Class>
+	<Class name="2D">
+		<Student name="Mark Hardy" img="test8.png" gender="Female"/>
+		<Student name="Timmy Kardishan" img="test5.png" gender="Female"/>
+		<Student name="Shane Cena" img="test2.png" gender="Male"/>
+		<Student name="Steve McMahon" img="test7.png" gender="Female"/>
+		<Student name="Timmy Job" img="test4.png" gender="Male"/>
+	</Class>
+	<Class name="2E">
+		<Student name="Brock Gate" img="test5.png" gender="Female"/>
+		<Student name="Mark Lesnar" img="test4.png" gender="Female"/>
+		<Student name="Jeff Gate" img="test4.png" gender="Male"/>
+		<Student name="Maria Kardishan" img="test5.png" gender="Female"/>
+		<Student name="Brock Austin" img="test8.png" gender="Male"/>
+	</Class>
+	<Class name="2F">
+		<Student name="Bill Hardy" img="test4.png" gender="Female"/>
+		<Student name="Brock Cena" img="test5.png" gender="Female"/>
+		<Student name="Steve Heyman" img="test7.png" gender="Female"/>
+		<Student name="Mark Cena" img="test9.png" gender="Female"/>
+		<Student name="Maria Ozawa" img="test7.png" gender="Female"/>
+	</Class>
+	<Class name="3A">
+		<Student name="Brock Morrison" img="test4.png" gender="Female"/>
+		<Student name="Maria Hardy" img="test10.png" gender="Female"/>
+		<Student name="Mark Gate" img="test3.png" gender="Male"/>
+		<Student name="Shane Lesnar" img="test1.png" gender="Male"/>
+		<Student name="Dawney Goldberg" img="test8.png" gender="Female"/>
+	</Class>
+	<Class name="3B">
+		<Student name="John Morrison" img="test1.png" gender="Male"/>
+		<Student name="Bill McMahon" img="test2.png" gender="Male"/>
+		<Student name="Bill Kardishan" img="test6.png" gender="Female"/>
+		<Student name="Dawney Cena" img="test9.png" gender="Female"/>
+		<Student name="Kim Job" img="test2.png" gender="Female"/>
+	</Class>
+	<Class name="3C">
+		<Student name="Dawney Cena" img="test3.png" gender="Female"/>
+		<Student name="John Gate" img="test10.png" gender="Female"/>
+		<Student name="Timmy Ozawa" img="test3.png" gender="Female"/>
+		<Student name="Steve Heyman" img="test9.png" gender="Female"/>
+		<Student name="Timmy Job" img="test10.png" gender="Male"/>
+	</Class>
+	<Class name="3D">
+		<Student name="Brock Cruises" img="test1.png" gender="Female"/>
+		<Student name="Steve Johnson" img="test6.png" gender="Female"/>
+		<Student name="Timmy Gate" img="test7.png" gender="Female"/>
+		<Student name="Kim Hardy" img="test3.png" gender="Female"/>
+		<Student name="Dawney McMahon" img="test4.png" gender="Male"/>
+	</Class>
+	<Class name="3E">
+		<Student name="Steve McMahon" img="test10.png" gender="Male"/>
+		<Student name="Kim Ozawa" img="test1.png" gender="Male"/>
+		<Student name="Paul Gate" img="test3.png" gender="Male"/>
+		<Student name="Kim Henry" img="test5.png" gender="Female"/>
+		<Student name="Mark Cena" img="test7.png" gender="Male"/>
+	</Class>
+	<Class name="3F">
+		<Student name="Brock Morrison" img="test7.png" gender="Female"/>
+		<Student name="Shane Gate" img="test2.png" gender="Male"/>
+		<Student name="Jeff Morrison" img="test7.png" gender="Male"/>
+		<Student name="Bill Goldberg" img="test6.png" gender="Male"/>
+		<Student name="John McMahon" img="test4.png" gender="Male"/>
+	</Class>
+	<Class name="4A">
+		<Student name="Timmy Hardy" img="test1.png" gender="Male"/>
+		<Student name="Dawney Cena" img="test8.png" gender="Female"/>
+		<Student name="Timmy Gate" img="test6.png" gender="Female"/>
+		<Student name="Brock Kardishan" img="test8.png" gender="Female"/>
+		<Student name="Bill Job" img="test2.png" gender="Male"/>
+	</Class>
+	<Class name="4B">
+		<Student name="Shane Cruises" img="test8.png" gender="Male"/>
+		<Student name="Timmy Hardy" img="test6.png" gender="Female"/>
+		<Student name="Steve Goldberg" img="test3.png" gender="Male"/>
+		<Student name="Tom Henry" img="test9.png" gender="Male"/>
+		<Student name="Brock Lesnar" img="test5.png" gender="Male"/>
+	</Class>
+	<Class name="4C">
+		<Student name="John Cruises" img="test4.png" gender="Female"/>
+		<Student name="Jeff Cena" img="test6.png" gender="Male"/>
+		<Student name="Brock Lesnar" img="test2.png" gender="Male"/>
+		<Student name="Shane Johnson" img="test2.png" gender="Female"/>
+		<Student name="Dawney Lesnar" img="test5.png" gender="Male"/>
+	</Class>
+	<Class name="4D">
+		<Student name="John Kardishan" img="test4.png" gender="Female"/>
+		<Student name="Kim Lesnar" img="test8.png" gender="Male"/>
+		<Student name="Mark Morrison" img="test9.png" gender="Male"/>
+		<Student name="Kim Job" img="test9.png" gender="Male"/>
+		<Student name="Mark Heyman" img="test5.png" gender="Female"/>
+	</Class>
+	<Class name="4E">
+		<Student name="John Goldberg" img="test7.png" gender="Male"/>
+		<Student name="Timmy Kardishan" img="test9.png" gender="Male"/>
+		<Student name="Paul Ozawa" img="test5.png" gender="Female"/>
+		<Student name="Paul Heyman" img="test8.png" gender="Female"/>
+		<Student name="Tom Gate" img="test4.png" gender="Male"/>
+	</Class>
+	<Class name="4F">
+		<Student name="Shane Austin" img="test2.png" gender="Female"/>
+		<Student name="Mark Job" img="test1.png" gender="Male"/>
+		<Student name="Mark Kardishan" img="test5.png" gender="Male"/>
+		<Student name="Timmy Heyman" img="test6.png" gender="Male"/>
+		<Student name="Steve Job" img="test7.png" gender="Male"/>
+	</Class>
+	<Class name="5A">
+		<Student name="Steve Morrison" img="test7.png" gender="Male"/>
+		<Student name="Paul Gate" img="test8.png" gender="Female"/>
+		<Student name="Maria Job" img="test8.png" gender="Female"/>
+		<Student name="Kim Cena" img="test1.png" gender="Male"/>
+		<Student name="Steve Henry" img="test10.png" gender="Male"/>
+	</Class>
+	<Class name="5B">
+		<Student name="Steve Morrison" img="test5.png" gender="Male"/>
+		<Student name="Mark Kardishan" img="test5.png" gender="Female"/>
+		<Student name="Brock McMahon" img="test4.png" gender="Male"/>
+		<Student name="John Job" img="test7.png" gender="Male"/>
+		<Student name="Paul Heyman" img="test6.png" gender="Male"/>
+	</Class>
+	<Class name="5C">
+		<Student name="Jeff Lesnar" img="test8.png" gender="Male"/>
+		<Student name="Jeff Johnson" img="test9.png" gender="Male"/>
+		<Student name="Paul Ozawa" img="test4.png" gender="Female"/>
+		<Student name="Steve Goldberg" img="test6.png" gender="Male"/>
+		<Student name="Tom Job" img="test8.png" gender="Male"/>
+	</Class>
+	<Class name="5D">
+		<Student name="Maria Cena" img="test7.png" gender="Female"/>
+		<Student name="Mark Cena" img="test10.png" gender="Male"/>
+		<Student name="Bill Cruises" img="test6.png" gender="Male"/>
+		<Student name="Timmy Austin" img="test3.png" gender="Female"/>
+		<Student name="Jeff Cena" img="test9.png" gender="Male"/>
+	</Class>
+	<Class name="5E">
+		<Student name="Kim Henry" img="test6.png" gender="Male"/>
+		<Student name="Timmy Goldberg" img="test4.png" gender="Female"/>
+		<Student name="Steve McMahon" img="test4.png" gender="Male"/>
+		<Student name="Dawney Cruises" img="test7.png" gender="Male"/>
+		<Student name="Mark Hardy" img="test1.png" gender="Female"/>
+	</Class>
+	<Class name="5F">
+		<Student name="Mark Job" img="test6.png" gender="Female"/>
+		<Student name="Shane Cruises" img="test3.png" gender="Male"/>
+		<Student name="Paul Gate" img="test5.png" gender="Male"/>
+		<Student name="Mark Kardishan" img="test1.png" gender="Female"/>
+		<Student name="Tom Hardy" img="test5.png" gender="Male"/>
+	</Class>
+</School>
