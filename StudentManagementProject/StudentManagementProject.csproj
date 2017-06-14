@@ -97,13 +97,28 @@
     <Compile Include="Data\Clients\Database\GeneralDatabase.cs" />
     <Compile Include="Data\Clients\Database\LoginRegisterDatabaseCall.cs" />
     <Compile Include="Data\Clients\Database\StudentDatabaseCall.cs" />
+    <Compile Include="Data\Managers\LoginRepositoryImp.cs" />
+    <Compile Include="Data\Managers\RegisterRepositoryImp.cs" />
+    <Compile Include="Domain\Callbacks\UserUseCase.cs" />
     <Compile Include="Domain\Entities\Class.cs" />
     <Compile Include="Domain\Entities\Student.cs" />
     <Compile Include="Domain\Entities\User.cs" />
+    <Compile Include="Domain\Repositories\UserRepository.cs" />
+    <Compile Include="Domain\Usecases\GeneralUserUseCase.cs" />
+    <Compile Include="Domain\Usecases\LoginUseCase.cs" />
+    <Compile Include="Domain\Usecases\RegisterUseCase.cs" />
     <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="Presentation\Presenters\LoginPresenter.cs" />
+    <Compile Include="Presentation\Presenters\RegisterPresenter.cs" />
+    <Compile Include="Presentation\Presenters\UserPresenter.cs" />
     <Compile Include="Presentation\Systems\CheckInputUtils.cs" />
     <Compile Include="Presentation\Systems\CheckImgPathUtils.cs" />
     <Compile Include="Presentation\Systems\LocalizedApp.cs" />
+    <Compile Include="Presentation\Systems\ToastMaker.cs" />
+    <Compile Include="Presentation\UIs\Customs\Drawer\DrawerLayout.cs" />
+    <Compile Include="Presentation\UIs\Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\UIs\Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -124,6 +139,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="Presentation\UIs\Pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Presentation\UIs\Pages\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -143,9 +162,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\bart.jpg" />
+    <Content Include="Assets\ic_drawer.png" />
+    <Content Include="Assets\ic_image.png" />
     <Content Include="README_FIRST.txt" />
-    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
-    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Email.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Play.png" />
@@ -186,11 +206,6 @@
     <Folder Include="Data\Clients\Locals\" />
     <Folder Include="Data\DatabaseCall\" />
     <Folder Include="Data\Entity\" />
-    <Folder Include="Data\Managers\" />
-    <Folder Include="Domain\Callbacks\" />
-    <Folder Include="Domain\Repositories\" />
-    <Folder Include="Presentation\Presenters\" />
-    <Folder Include="Presentation\UIs\ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="SQLite.WP80, Version=3.19.2">
@@ -198,6 +213,9 @@
     </SDKReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="CS.Windows.Controls">
+      <HintPath>..\packages\WindowsPhoneControls.0.3.0\lib\sl4-windowsphone71\CS.Windows.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
