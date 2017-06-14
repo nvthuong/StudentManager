@@ -31,7 +31,7 @@ namespace StudentManagementProjectUnitTest
             Assert.IsTrue(CheckInputUtils.checkPassword(checkedUser.Password));
 
             // Check added method
-            Assert.IsTrue(LoginRegisterDatabaseCall.getInstance().checkUser(checkedUser));
+            Assert.IsNotNull(LoginRegisterDatabaseCall.getInstance().checkUser(checkedUser));
         }
 
         private Boolean addNewUser()
@@ -48,7 +48,7 @@ namespace StudentManagementProjectUnitTest
             Assert.IsTrue(CheckInputUtils.checkPassword(newUser.Password));
 
             // Check added method
-            return LoginRegisterDatabaseCall.getInstance().addUser(newUser);
+            return LoginRegisterDatabaseCall.getInstance().addUser(newUser) == null ? false : true;
         }
     }
 }
