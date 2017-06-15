@@ -7,6 +7,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using StudentManagementProject.Resources;
+using StudentManagementProject.Presentation.UIs.ViewModels;
 
 namespace StudentManagementProject
 {

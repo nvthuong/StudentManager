@@ -11,11 +11,13 @@ D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\vi-VN\StudentMa
 D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\AppManifest.xaml
 D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\Properties\WMAppManifest.xml
 D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\StudentManagementProject_Debug_x86.xap
+D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\CS.Windows.Controls.dll
 D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\Microsoft.Phone.Controls.dll
 D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\Microsoft.Phone.Controls.Toolkit.dll
 D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\Microsoft.Phone.Toolkit.Testing.dll
 D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\Microsoft.VisualStudio.QualityTools.UnitTesting.Phone.dll
 D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\Sqlite.winmd
+D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\CS.Windows.Controls.pdb
 D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\Sqlite.dll
 D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
 D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
@@ -68,6 +70,7 @@ D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\zh-CN\Microsoft
 D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
 D:\project\StudentManager\StudentManagementProject\obj\x86\Debug\StudentManagementProject.csprojResolveAssemblyReference.cache
 D:\project\StudentManager\StudentManagementProject\obj\x86\Debug\App.g.cs
+D:\project\StudentManager\StudentManagementProject\obj\x86\Debug\Presentation\UIs\Pages\LoginPage.g.cs
 D:\project\StudentManager\StudentManagementProject\obj\x86\Debug\Presentation\UIs\Pages\MainPage.g.cs
 D:\project\StudentManager\StudentManagementProject\obj\x86\Debug\Presentation\UIs\Pages\RegisPage.g.cs
 D:\project\StudentManager\StudentManagementProject\obj\x86\Debug\StudentManagementProject.g.resources
@@ -78,6 +81,4 @@ D:\project\StudentManager\StudentManagementProject\obj\x86\Debug\vi-VN\StudentMa
 D:\project\StudentManager\StudentManagementProject\obj\x86\Debug\StudentManagementProject.dll
 D:\project\StudentManager\StudentManagementProject\obj\x86\Debug\StudentManagementProject.pdb
 D:\project\StudentManager\StudentManagementProject\obj\x86\Debug\XapCacheFile.xml
-D:\project\StudentManager\StudentManagementProject\obj\x86\Debug\Presentation\UIs\Pages\LoginPage.g.cs
-D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\CS.Windows.Controls.dll
-D:\project\StudentManager\StudentManagementProject\Bin\x86\Debug\CS.Windows.Controls.pdb
+D:\project\StudentManager\StudentManagementProject\obj\x86\Debug\Presentation\UIs\Pages\StudentListPage.g.cs

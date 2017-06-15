@@ -15,6 +15,10 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
+    <phone:PhoneApplicationPage.Resources>
+        
+    </phone:PhoneApplicationPage.Resources>
+    
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
@@ -28,20 +32,105 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Image Margin="5"  x:Name="DrawerIcon"  Grid.Column="0" 
+            <Image Margin="5,0,20,0"  x:Name="DrawerIcon"  Grid.Column="0" 
                    Source="/Assets/ic_drawer.png" HorizontalAlignment="Left" 
                    Tap="DrawerIcon_Tap" />
-            <TextBlock Grid.Column="1" Text="DRAWER LAYOUT DEMO" Foreground="White" VerticalAlignment="Center" FontSize="18"/>
+            <TextBlock Grid.Column="1" Text="Welcome" 
+                       Foreground="White" VerticalAlignment="Center" 
+                       FontSize="25"/>
         </Grid>
 
         <drawer:DrawerLayout Grid.Row="1"  x:Name="DrawerLayout">
             <Grid Background="White">
-                <TextBlock 
-                    FontSize="35"
-                    Foreground="Black"
-                    Margin="12"
-                    Text="This is the main fragment content" 
-                    TextTrimming="WordEllipsis" />
+                <ScrollViewer>
+                    <StackPanel Margin="12">
+                        <TextBlock Text="Cambridge University" 
+                                   TextWrapping="Wrap"
+                                   TextAlignment="Center"
+                                   Foreground="Black"
+                                   Style="{StaticResource PhoneTextTitleHeaderStyle}"/>
+                        <Image
+                            Margin="0,20,0,0"
+                            Width="150"
+                            Source="/Assets/school_logo.png"/>
+                        
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                Source="/Assets/school_back_1.jpg">
+                                <Image.OpacityMask>
+                                    <RadialGradientBrush GradientOrigin="0.5,0.5"
+                                                        Center="0.5,0.5"
+                                                        RadiusX="0.5"
+                                                        RadiusY="0.5">
+                                        <GradientStop Color="#ffffffff" Offset="0.5" />
+                                        <GradientStop Color="#00ffffff" Offset="0.8" />
+                                    </RadialGradientBrush>
+                                </Image.OpacityMask>
+
+                            </Image>
+                            <Image
+                                Grid.Column="1"
+                                Source="/Assets/school_back_2.jpg">
+                                <Image.OpacityMask>
+                                    <RadialGradientBrush GradientOrigin="0.5,0.5"
+                                                        Center="0.5,0.5"
+                                                        RadiusX="0.5"
+                                                        RadiusY="0.5">
+                                        <GradientStop Color="#ffffffff" Offset="0.5" />
+                                        <GradientStop Color="#00ffffff" Offset="0.8" />
+                                    </RadialGradientBrush>
+                                </Image.OpacityMask>
+
+                            </Image>
+                            <Image
+                                Grid.Row="1"
+                                Source="/Assets/school_back_3.jpg">
+                                <Image.OpacityMask>
+                                    <RadialGradientBrush GradientOrigin="0.5,0.5"
+                                                        Center="0.5,0.5"
+                                                        RadiusX="0.5"
+                                                        RadiusY="0.5">
+                                        <GradientStop Color="#ffffffff" Offset="0.5" />
+                                        <GradientStop Color="#00ffffff" Offset="0.8" />
+                                    </RadialGradientBrush>
+                                </Image.OpacityMask>
+
+                            </Image>
+                            <Image
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Source="/Assets/school_back_4.jpg">
+                                <Image.OpacityMask>
+                                    <RadialGradientBrush GradientOrigin="0.5,0.5"
+                                                        Center="0.5,0.5"
+                                                        RadiusX="0.5"
+                                                        RadiusY="0.5">
+                                        <GradientStop Color="#ffffffff" Offset="0.5" />
+                                        <GradientStop Color="#00ffffff" Offset="0.8" />
+                                    </RadialGradientBrush>
+                                </Image.OpacityMask>
+
+                            </Image>
+
+                        </Grid>
+                        <TextBlock
+                            Margin="0,20,0,0"
+                            Foreground="Black"
+                            TextWrapping="Wrap"
+                            FontSize="25"
+                            Text="{Binding Path=LocalizedResources.SchoolInformation,
+                                    Source={StaticResource LocalizedStrings}}"/>
+
+                    </StackPanel>
+                </ScrollViewer>
             </Grid>
 
             <Grid x:Name="ListFragment" Background="White">
@@ -52,50 +141,47 @@
                             <RowDefinition Height="50" />
                             <RowDefinition Height="50" />
                             <RowDefinition Height="50" />
-                            <RowDefinition Height="50" />
-                            <RowDefinition Height="50" />
 
                         </Grid.RowDefinitions>
 
                         <Grid x:Name="MenuIdentity" Background="Transparent" Grid.Row="0">
                             <StackPanel Margin="5" Orientation="Horizontal">
-                                <Image Source="/Assets/bart.jpg" Height="48" Width="48" Stretch="UniformToFill" />
-                                <TextBlock x:Name="FullName" Text="BART SIMPSON" Foreground="Black"  FontSize="18" TextWrapping="Wrap" Margin="10 0 0 0"  />
+                                <Image Source="/Assets/icon_user.png" Height="64" 
+                                       Width="64" Margin="0,0,20,0" Stretch="UniformToFill" />
+                                <TextBlock x:Name="FullName" 
+                                           Text="{Binding Fullname, Mode=OneTime}" 
+                                           Foreground="Black"  FontSize="25" 
+                                           TextWrapping="Wrap" Margin="10 0 0 0"  />
                             </StackPanel>
                         </Grid>
 
                         <Grid x:Name="MenuActions" Background="Transparent" Grid.Row="1">
                             <Border BorderBrush="#FFE0E0E0" BorderThickness="0 0 0 1" />
                             <StackPanel Margin="10 10 0 5" VerticalAlignment="Bottom">
-                                <TextBlock Text="MENU" Foreground="Black"  VerticalAlignment="Bottom" HorizontalAlignment="Left"  FontSize="16" FontWeight="SemiBold" />
+                                <TextBlock Text="MENU" Foreground="Black" 
+                                           VerticalAlignment="Bottom" 
+                                           HorizontalAlignment="Left"  
+                                           FontSize="16" FontWeight="SemiBold" />
                             </StackPanel>
                         </Grid>
 
-                        <Grid x:Name="Item1" Background="Transparent" Grid.Row="2">
+                        <Grid x:Name="ListStudent" Background="Transparent" 
+                              Grid.Row="2" Tap="ListStudent_Tap">
                             <Border BorderBrush="#FFE0E0E0" BorderThickness="0 0 0 1" />
                             <StackPanel Margin="20 10 0 5" VerticalAlignment="Bottom">
-                                <TextBlock Text="Ay caramba!" Foreground="Black"  VerticalAlignment="Bottom" HorizontalAlignment="Left"  FontSize="18" />
+                                <TextBlock Text="List Student" Foreground="Black"  
+                                           VerticalAlignment="Bottom"
+                                           HorizontalAlignment="Left"  FontSize="18" />
                             </StackPanel>
                         </Grid>
 
-                        <Grid x:Name="Item2" Background="Transparent" Grid.Row="3">
+                        <Grid x:Name="AddStudent" Background="Transparent" Grid.Row="3">
                             <Border BorderBrush="#FFE0E0E0" BorderThickness="0 0 0 1" />
                             <StackPanel Margin="20 10 0 5" VerticalAlignment="Bottom">
-                                <TextBlock Text="Don't have a cow, man!" Foreground="Black"  VerticalAlignment="Bottom" HorizontalAlignment="Left"  FontSize="18" />
-                            </StackPanel>
-                        </Grid>
-
-                        <Grid x:Name="Item3" Background="Transparent" Grid.Row="4">
-                            <Border BorderBrush="#FFE0E0E0" BorderThickness="0 0 0 1" />
-                            <StackPanel Margin="20 10 0 5" VerticalAlignment="Bottom">
-                                <TextBlock Text="Hey, Ottoman!" Foreground="Black"  VerticalAlignment="Bottom" HorizontalAlignment="Left"  FontSize="18" />
-                            </StackPanel>
-                        </Grid>
-
-                        <Grid x:Name="Item4" Background="Transparent" Grid.Row="5">
-                            <Border BorderBrush="#FFE0E0E0" BorderThickness="0 0 0 1" />
-                            <StackPanel Margin="20 10 0 5" VerticalAlignment="Bottom">
-                                <TextBlock Text="Eat my shorts!" Foreground="Black"  VerticalAlignment="Bottom" HorizontalAlignment="Left"  FontSize="18" />
+                                <TextBlock Text="Add Student" 
+                                           Foreground="Black"  
+                                           VerticalAlignment="Bottom" 
+                                           HorizontalAlignment="Left"  FontSize="18" />
                             </StackPanel>
                         </Grid>
                     </Grid>

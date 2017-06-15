@@ -137,4 +137,9 @@
   <data name="LoginTitle" xml:space="preserve">
     <value>Login</value>
   </data>
+  <data name="SchoolInformation" xml:space="preserve">
+    <value>Cambridge is a university city and the county town of Cambridgeshire, England, on the River Cam approximately 50 miles (80 km) north of London. At the United Kingdom Census 2011, its population was 123,867, including 24,488 students.
+Cambridge is at the heart of the high-technology Silicon Fen with industries such as software and bioscience and many start-up companies born out of the university. More than 40% of the workforce has a higher education qualification, more than twice the national average. The Cambridge Biomedical Campus, one of the largest biomedical research clusters in the world, is soon to be home to AstraZeneca, a hotel and the relocated Papworth Hospital.
+Parker's Piece hosted the first ever game of Association football. The Strawberry Fair music and arts festival and Midsummer Fairs are held on Midsummer Common, and the annual Cambridge Beer Festival takes place on Jesus Green. The city is adjacent to the M11 and A14 roads, and Cambridge station is less than an hour from London King's Cross railway station.</value>
+  </data>
 </root>
