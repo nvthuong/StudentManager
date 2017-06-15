@@ -113,5 +113,15 @@ namespace StudentManagementProject.Resources {
                 return ResourceManager.GetString("ResourceLanguage", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cambridge is a university city and the county town of Cambridgeshire, England, on the River Cam approximately 50 miles (80 km) north of London. At the United Kingdom Census 2011, its population was 123,867, including 24,488 students.
+        ///Cambridge is at the heart of the high-technology Silicon Fen with industries such as software and bioscience and many start-up companies born out of the university. More than 40% of the workforce has a higher education qualification, more than twice the national average. The C [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string SchoolInformation {
+            get {
+                return ResourceManager.GetString("SchoolInformation", resourceCulture);
+            }
+        }
     }
 }

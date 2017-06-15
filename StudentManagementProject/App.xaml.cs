@@ -7,6 +7,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using StudentManagementProject.Resources;
+using StudentManagementProject.Presentation.UIs.ViewModels;
 
 namespace StudentManagementProject
 {
@@ -114,7 +115,7 @@ namespace StudentManagementProject
 
             // Create the frame but don't set it as RootVisual yet; this allows the splash
             // screen to remain active until the application is ready to render.
-            RootFrame = new PhoneApplicationFrame();
+            RootFrame = new TransitionFrame();
             RootFrame.Navigated += CompleteInitializePhoneApplication;
 
             // Handle navigation failures

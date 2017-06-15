@@ -7,60 +7,50 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using StudentManagementProject.Resources;
-using StudentManagementProject.Presentation.Systems;
+using StudentManagementProject.Domain.Entities;
+using StudentManagementProject.Presentation.UIs.ViewModels;
 
-namespace StudentManagementProject
+namespace StudentManagementProject.Presentation.UIs.Pages
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        // Constructor
+
+        private User user = new User()
+        {
+            Fullname = "Nguyen Anh Huy",
+            Email = "nguyenhuy3588@gmail.com",
+            ImgPath = "",
+            Gender = true,
+        };
+
+        private StudentSearchViewModel studentVM;
+
+        public User User
+        {
+            get { return user; }
+            set { user = value; }
+        }
+
         public MainPage()
         {
             InitializeComponent();
-            // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
+            DrawerLayout.InitializeDrawerLayout();
+            FullName.DataContext = user;
         }
 
-        // Sample code for building a localized ApplicationBar
-        //private void BuildLocalizedApplicationBar()
-        //{
-        //    // Set the page's ApplicationBar to a new instance of ApplicationBar.
-        //    ApplicationBar = new ApplicationBar();
-
-        //    // Create a new button and set the text value to the localized string from AppResources.
-        //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
-        //    appBarButton.Text = AppResources.AppBarButtonText;
-        //    ApplicationBar.Buttons.Add(appBarButton);
-
-        //    // Create a new menu item with the localized string from AppResources.
-        //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
-        //    ApplicationBar.MenuItems.Add(appBarMenuItem);
-        //}
-
-        private void initLanguage()
+        private void DrawerIcon_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-
+            if (DrawerLayout.IsDrawerOpen)
+                DrawerLayout.CloseDrawer();
+            else
+                DrawerLayout.OpenDrawer();
         }
 
-        private void txtUserName_GotFocus(object sender, RoutedEventArgs e)
+        private void ListStudent_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-
+            Uri path = new Uri("/Presentation/UIs/Pages/StudentListPage.xaml", UriKind.RelativeOrAbsolute);
+            NavigationService.Navigate(path);
         }
 
-        private void txtPassword_GotFocus(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void navRegis_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-
-        }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

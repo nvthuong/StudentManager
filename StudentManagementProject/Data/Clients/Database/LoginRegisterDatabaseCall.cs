@@ -32,7 +32,7 @@ namespace StudentManagementProject.Data.Clients.Database
             database.CreateTable<User>();
         }
 
-        public Boolean addUser(User newUser)
+        public User addUser(User newUser)
         {
             if (database != null)
             {
@@ -41,32 +41,36 @@ namespace StudentManagementProject.Data.Clients.Database
                     var result = database.Insert(newUser);
                     if (result == 0)
                     {
-                        return false;
+                        return null;
+                    }
+                    else
+                    {
+                        return newUser;
                     }
                 }
                 catch (SQLiteException sqlException)
                 {
-                    return false;
+                    return null;
                 }
             }
-            return true;
+            return null;
         }
 
-        public Boolean checkUser(User validatedUser)
+        public User checkUser(User validatedUser)
         {
             if (database != null)
             {
-                var value = database.Query<User>("select Password from User where Email = ?", validatedUser.Email);
+                var value = database.Query<User>("select * from User where Email = ?", validatedUser.Email);
 
                 foreach (User user in value)
                 {
                     if (user.Password == validatedUser.Password)
                     {
-                        return true;
+                        return user;
                     }
                 }
             }
-            return false;
+            return null;
         }
 
         public Boolean deleteAllUser()

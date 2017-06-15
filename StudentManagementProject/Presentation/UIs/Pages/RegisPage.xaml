@@ -13,6 +13,216 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.Resources>
+
+        <Style x:Key="PhoneButtonBase" TargetType="ButtonBase">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="{StaticResource PhoneForegroundBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource PhoneForegroundBrush}"/>
+            <Setter Property="BorderThickness" Value="{StaticResource PhoneBorderThickness}"/>
+            <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiBold}"/>
+            <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+            <Setter Property="Padding" Value="10,5,10,6"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ButtonBase">
+                        <Grid Background="Transparent">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentContainer">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneButtonBasePressedForegroundBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="ButtonBackground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneAccentBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentContainer">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneDisabledBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="ButtonBackground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneDisabledBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="ButtonBackground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border x:Name="ButtonBackground" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="0" Margin="{StaticResource PhoneTouchTargetOverhang}">
+                                <ContentControl x:Name="ContentContainer" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="PhoneRadioButtonCheckBoxBase" BasedOn="{StaticResource PhoneButtonBase}" TargetType="ToggleButton">
+            <Setter Property="Background" Value="{StaticResource PhoneRadioCheckBoxBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource PhoneRadioCheckBoxBorderBrush}"/>
+            <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+            <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilyNormal}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+        <Style x:Key="RadioButtonCustomStyle" BasedOn="{StaticResource PhoneRadioButtonCheckBoxBase}" TargetType="RadioButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Grid Background="Transparent">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CheckMark">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                            <GradientStop Color="Black" Offset="0"/>
+                                                            <GradientStop Color="#FF44FB00" Offset="1"/>
+                                                        </LinearGradientBrush>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="EnabledCheckBackground">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Collapsed</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="PressedDarkCheckBackground">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="PressedLightCheckBackground">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="CheckMark">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                            <GradientStop Color="Black" Offset="0"/>
+                                                            <GradientStop Color="#FFA0CCEA" Offset="1"/>
+                                                        </LinearGradientBrush>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="EnabledCheckBackground">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Collapsed</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="DisabledDarkCheckBackground">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="DisabledLightCheckBackground">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="CheckMark">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Black"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentContainer">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneDisabledBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="CheckMark">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates"/>
+                                <VisualStateGroup x:Name="ValidationStates"/>
+                            </VisualStateManager.VisualStateGroups>
+                            <Grid Margin="{StaticResource PhoneTouchTargetLargeOverhang}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="32"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Ellipse x:Name="EnabledCheckBackground"  HorizontalAlignment="Left" Height="32" IsHitTestVisible="False" VerticalAlignment="Center" Width="32">
+                                    <Ellipse.Fill>
+                                        <ImageBrush  Stretch="Uniform" ImageSource="/Images/radio_n_hdpi.png"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <Canvas  HorizontalAlignment="Left" Height="32" IsHitTestVisible="False" Opacity="{StaticResource PhoneDarkThemeOpacity}" VerticalAlignment="Center" Width="32">
+                                    <Ellipse x:Name="PressedDarkCheckBackground" Fill="{StaticResource PhoneRadioCheckBoxPressedBrush}" Height="32" Visibility="Collapsed" Width="32"/>
+                                    <Ellipse x:Name="DisabledDarkCheckBackground" Fill="White" Height="32" Visibility="Collapsed" Width="32"/>
+                                </Canvas>
+                                <Canvas HorizontalAlignment="Left" Height="32" IsHitTestVisible="False" Opacity="{StaticResource PhoneLightThemeOpacity}" VerticalAlignment="Center" Width="32">
+                                    <Ellipse x:Name="PressedLightCheckBackground" Fill="{StaticResource PhoneRadioCheckBoxPressedBrush}" Height="32" Stroke="{StaticResource PhoneForegroundBrush}" StrokeThickness="{StaticResource PhoneStrokeThickness}" Visibility="Collapsed" Width="32"/>
+                                    <Ellipse x:Name="DisabledLightCheckBackground" Fill="White" Height="32" Stroke="{StaticResource PhoneDisabledBrush}" StrokeThickness="{StaticResource PhoneStrokeThickness}" Visibility="Collapsed" Width="32"/>
+                                </Canvas>
+                                <Ellipse  x:Name="CheckMark"  HorizontalAlignment="Center" Height="16" IsHitTestVisible="False" Visibility="Collapsed" VerticalAlignment="Center" Width="16"/>
+                                <ContentControl x:Name="ContentContainer" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Grid.Column="1" Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="12,0,0,0" Padding="{TemplateBinding Padding}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </phone:PhoneApplicationPage.Resources>
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:SlideTransition Mode="SlideLeftFadeIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:SlideTransition Mode="SlideRightFadeOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
 
     <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
@@ -52,40 +262,69 @@
                      TextAlignment="Center"
                      VerticalAlignment="Center"
                      Background="#33bbbbbb"
-                     Padding="0,20,0,20"
+                     Padding="0,15,0,15"
+                     GotFocus="txtUserNameRegis_GotFocus"
+                     LostFocus="txtUserNameRegis_LostFocus"
                      Text="username"/>
 
-            <TextBox x:Name="txtPasswordRegis" Grid.Row="1"
+
+            <TextBox x:Name="txtFullNameRegis" Grid.Row="1"
                      TextAlignment="Center"
                      VerticalAlignment="Top"
                      Background="#33bbbbbb"
-                     Padding="0,20,0,20"
-                     Margin="0,-30,0,0"
-                     Text="password"/>
+                     Padding="0,15,0,15"
+                     Margin="0,0,0,0"
+                     GotFocus="txtFullNameRegis_GotFocus"
+                     LostFocus="txtFullNameRegis_LostFocus"
+                     Text="full name"/>
 
-            <TextBox x:Name="txtRePasswordRegis" Grid.Row="2"
-                     TextAlignment="Center"
+            <PasswordBox x:Name="txtPasswordRegis" Grid.Row="2"
                      VerticalAlignment="Top"
                      Background="#33bbbbbb"
-                     Padding="0,40,0,20"
-                     Margin="0,-110,0,0"
-                     Text="retype password"/>
+                     Padding="0,15,0,15"
+                     Margin="0,0,0,0"
+                     GotFocus="txtPasswordRegis_GotFocus"
+                     LostFocus="txtPasswordRegis_LostFocus"
+                     Password="password"
+                     Style="{StaticResource PasswordBoxCustomStyle}"/>
 
-            <toolkit:ListPicker Grid.Row="3" 
-                     Background="#33bbbbbb">
-                <toolkit:ListPickerItem Foreground="Black">ABC</toolkit:ListPickerItem>
-                <toolkit:ListPickerItem Foreground="Black">DEF</toolkit:ListPickerItem>
-                <toolkit:ListPickerItem Background="Black">GHI</toolkit:ListPickerItem>
-            </toolkit:ListPicker>
+            <PasswordBox x:Name="txtRePasswordRegis" Grid.Row="3"
+                     VerticalAlignment="Top"
+                     Background="#33bbbbbb"
+                     Padding="0,15,0,15"
+                     Margin="0,0,0,0"
+                     GotFocus="txtRePasswordRegis_GotFocus"
+                     LostFocus="txtRePasswordRegis_LostFocus"
+                     Password="password"
+                     Style="{StaticResource PasswordBoxCustomStyle}"/>
 
-            <Grid Grid.Row="4">
-                <RadioButton Content="Male"
-                             IsEnabled="True" Foreground="#FF0C0C0C"
-                             />
-                <RadioButton Content="Female"
-                             IsEnabled="True"/>
+            <Grid Grid.Row="4" Margin="12,0,12,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="UserImage" Source="/Assets/ic_image.png" Grid.Column="0"
+                           Stretch="Fill" Margin="0,10,10,10" Tap="Image_Tap"/>
+                
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal"
+                            Grid.Column="1">
+                    <RadioButton 
+                        x:Name="rdioMale"
+                        Content="Male"
+                        IsEnabled="True" Foreground="#FF0C0C0C"
+                        GroupName="UserGender" IsChecked="True"
+                        Click="RadioButton_Click" Style="{StaticResource RadioButtonCustomStyle}"
+                         />
+                    <Grid Margin="10,0,10,0"/>
+                    <RadioButton
+                        x:Name="rdioFMale"
+                        Content="Female"
+                        IsEnabled="True" Foreground="#FF0C0C0C"
+                        GroupName="UserGender" Click="RadioButton_Click" Style="{StaticResource RadioButtonCustomStyle}"/>
+                </StackPanel>
             </Grid>
-            
+
             <Button
                     x:Name="btnRegister"
                     Grid.Row="5"
@@ -93,7 +332,8 @@
                     Content="Register"
                     Padding="0,20,0,20"
                     Margin="0,0,0,0"
-                    Background="#FF0092C9"/>
+                    Background="#FF0092C9"
+                    Click="btnRegister_Click"/>
 
         </Grid>
     </Grid>
