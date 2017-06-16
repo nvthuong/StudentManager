@@ -19,11 +19,12 @@ using Microsoft.Xna.Framework.Media;
 
 namespace StudentManagementProject.Presentation.UIs.Pages
 {
-    public partial class CreateStudent : PhoneApplicationPage
+    public partial class CreateStudent : PhoneApplicationPage, StudentManagementProject.Presentation.Presenters.StudentPresenter.CreateStudentViewSurface
     {
-        StudentDatabaseCall db = StudentDatabaseCall.getInstance();
+        StudentPresenter createStudentPresenter;
         private PhotoChooserTask photoChooserTask;
         private Student student;
+        
         public CreateStudent()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace StudentManagementProject.Presentation.UIs.Pages
             dropClass.Items.Add("Class 2");
             dropClass.Items.Add("Class 3");
             photoChooserTask = new PhotoChooserTask();
+            createStudentPresenter = new StudentPresenter(this);
             photoChooserTask.Completed += photoChooserTask_Completed;
         }
 
@@ -67,13 +69,7 @@ namespace StudentManagementProject.Presentation.UIs.Pages
             student.Address = txtAddress.Text;
             student.ClassName = dropClass.SelectedItem.ToString();
             student.Email = txtEmail.Text;
-            Boolean hasCreated = db.addStudent(student);
-            if (hasCreated)
-            {
-                Uri path = new Uri("/Presentation/UIs/Pages/MainPage.xaml", UriKind.RelativeOrAbsolute);
-                NavigationService.Navigate(path);
-            }
-            
+            createStudentPresenter.createStudent(student);
         }
 
         private void StudentImage_Tap(object sender, System.Windows.Input.GestureEventArgs e)
@@ -91,5 +87,18 @@ namespace StudentManagementProject.Presentation.UIs.Pages
             PhoneApplicationFrame frame = Application.Current.RootVisual as PhoneApplicationFrame;
             frame.GoBack();
         }
+
+        public void notifySuccess()
+        {
+            Uri path = new Uri("/Presentation/UIs/Pages/MainPage.xaml", UriKind.RelativeOrAbsolute);
+            NavigationService.Navigate(path);
+        }
+
+        public void notifyFail()
+        {
+            MessageBox.Show("Create fail!");
+        }
+
     }
+
 }

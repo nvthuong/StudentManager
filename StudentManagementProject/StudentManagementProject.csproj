@@ -97,18 +97,22 @@
     <Compile Include="Data\Clients\Database\GeneralDatabase.cs" />
     <Compile Include="Data\Clients\Database\LoginRegisterDatabaseCall.cs" />
     <Compile Include="Data\Clients\Database\StudentDatabaseCall.cs" />
+    <Compile Include="Data\Managers\CreateStudentRepositoryImp.cs" />
     <Compile Include="Data\Managers\LoginRepositoryImp.cs" />
     <Compile Include="Data\Managers\RegisterRepositoryImp.cs" />
     <Compile Include="Data\Managers\StudentSearchByClassRepoImp.cs" />
     <Compile Include="Data\Managers\StudentSearchByNameRepoImp.cs" />
     <Compile Include="Data\Managers\StudentSearchRepoImp.cs" />
+    <Compile Include="Domain\Callbacks\CreateStudentUseCaseCallback.cs" />
     <Compile Include="Domain\Callbacks\StudentUseCaseCallback.cs" />
     <Compile Include="Domain\Callbacks\UserUseCase.cs" />
     <Compile Include="Domain\Entities\Class.cs" />
     <Compile Include="Domain\Entities\Student.cs" />
     <Compile Include="Domain\Entities\User.cs" />
+    <Compile Include="Domain\Repositories\CreateStudentRepository.cs" />
     <Compile Include="Domain\Repositories\StudentRepository.cs" />
     <Compile Include="Domain\Repositories\UserRepository.cs" />
+    <Compile Include="Domain\Usecases\CreateStudentUseCase.cs" />
     <Compile Include="Domain\Usecases\DatabaseInitUseCase.cs" />
     <Compile Include="Domain\Usecases\StudentSearchUseCase.cs" />
     <Compile Include="Domain\Usecases\GeneralUserUseCase.cs" />
@@ -130,6 +134,7 @@
     <Compile Include="Presentation\UIs\Pages\CreateStudent.xaml.cs">
       <DependentUpon>CreateStudent.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\UIs\Pages\CreateStudentPresenter.cs" />
     <Compile Include="Presentation\UIs\Pages\ListStudentPage.xaml.cs">
       <DependentUpon>ListStudentPage.xaml</DependentUpon>
     </Compile>
