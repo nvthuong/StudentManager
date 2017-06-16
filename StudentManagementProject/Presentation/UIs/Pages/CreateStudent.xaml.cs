@@ -11,6 +11,11 @@ using StudentManagementProject.Data.Clients.Database;
 using StudentManagementProject.Domain.Entities;
 using Microsoft.Phone.Tasks;
 using StudentManagementProject.Presentation.Presenters;
+using System.IO;
+using Windows.Storage;
+using System.Windows.Media.Imaging;
+using System.IO.IsolatedStorage;
+using Microsoft.Xna.Framework.Media;
 
 namespace StudentManagementProject.Presentation.UIs.Pages
 {
@@ -41,6 +46,21 @@ namespace StudentManagementProject.Presentation.UIs.Pages
             }
         }
 
+        private void loadImage()
+        {
+            MediaLibrary media = new MediaLibrary();
+            var picture = media.Pictures.FirstOrDefault(p => p.Name.Contains(Path.GetFileName(student.ImagePath)));
+
+            if (picture != null)
+            {
+                // Picture found 
+                BitmapImage image = new BitmapImage();
+                image.SetSource(picture.GetImage());
+
+                StudentImage.Source = image;
+            }
+        }
+
         private void CreateStudent_Click(object sender, EventArgs e)
         {
             student.Name = txtFullName.Text;
@@ -61,15 +81,15 @@ namespace StudentManagementProject.Presentation.UIs.Pages
             photoChooserTask.Show();
         }
 
+        private void radioGender_Click(object sender, RoutedEventArgs e)
+        {
+            student.Gender = radioMale.IsChecked.Value;
+        }
+
         private void btnBack_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             PhoneApplicationFrame frame = Application.Current.RootVisual as PhoneApplicationFrame;
             frame.GoBack();
-        }
-
-        private void radioGender_Click(object sender, RoutedEventArgs e)
-        {
-            student.Gender = radioMale.IsChecked.Value;
         }
     }
 }

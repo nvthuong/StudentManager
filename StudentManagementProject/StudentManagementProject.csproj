@@ -123,6 +123,8 @@
     <Compile Include="Presentation\Systems\CheckImgPathUtils.cs" />
     <Compile Include="Presentation\Systems\LocalizedApp.cs" />
     <Compile Include="Presentation\Systems\ToastMaker.cs" />
+    <Compile Include="Presentation\UIs\Converters\FemaleGenderConverter.cs" />
+    <Compile Include="Presentation\UIs\Converters\MaleGenderConverter.cs" />
     <Compile Include="Presentation\UIs\Converters\PathToImageConverter.cs" />
     <Compile Include="Presentation\UIs\Customs\Drawer\DrawerLayout.cs" />
     <Compile Include="Presentation\UIs\Pages\CreateStudent.xaml.cs">
@@ -207,16 +209,16 @@
     <Content Include="Assets\icon_user.png" />
     <Content Include="Assets\ic_drawer.png" />
     <Content Include="Assets\ic_image.png" />
+    <Content Include="Assets\ic_search.png" />
     <Content Include="Assets\school_back_1.jpg" />
     <Content Include="Assets\school_back_2.jpg" />
     <Content Include="Assets\school_back_3.jpg" />
     <Content Include="Assets\school_back_4.jpg" />
     <Content Include="Assets\school_logo.png" />
     <Content Include="README_FIRST.txt" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
-    <Content Include="Toolkit.Content\ApplicationBar.Email.png" />
-    <Content Include="Toolkit.Content\ApplicationBar.Play.png" />
-    <Content Include="Toolkit.Content\ApplicationBar.Save.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
     <Resource Include="Assets\ApplicationIcon.gif" />
     <Content Include="Assets\ApplicationIcon.png">
@@ -267,12 +269,6 @@
     <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Phone.Toolkit.Testing">
-      <HintPath>..\packages\WPToolkitTestFx.4.2012.11.14\lib\wp8\Microsoft.Phone.Toolkit.Testing.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTesting.Phone">
-      <HintPath>..\packages\WPToolkitTestFx.4.2012.11.14\lib\wp8\Microsoft.VisualStudio.QualityTools.UnitTesting.Phone.dll</HintPath>
     </Reference>
     <Reference Include="Sqlite">
       <HintPath>..\packages\sqlite-net-wp8.3.8.5\lib\windowsphone8\Sqlite.winmd</HintPath>

@@ -9,36 +9,34 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Media.Imaging;
+using Microsoft.Phone.Tasks;
 using Windows.Storage;
+using Microsoft.Xna.Framework.Media;
+using Microsoft.Phone;
 
 namespace StudentManagementProject.Presentation.UIs.Converters
 {
     public class PathToImageConverter : IValueConverter
     {
+        private static readonly StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo language)
         {
-             String path = (String)value;
-             // the below class you will find in Stephen's answer mentioned above
+            WriteableBitmap bm = null;
 
-            //IsolatedStorageFile myFiles = IsolatedStorageFile.GetUserStoreForApplication();
-            //IsolatedStorageFileStream fs = myFiles.OpenFile(path, FileMode.Open, FileAccess.Read);
-            //using (StreamReader re = new StreamReader(fs))
-            //{
-            //    path = fs.Name;
-            //}
+            String path = (String)value;
 
+            MediaLibrary media = new MediaLibrary();
+            var picture = media.Pictures.FirstOrDefault(p => p.Name.Contains(Path.GetFileName(path)));
+            
+            if (picture != null)
+            {
+                // Picture found 
+                bm = PictureDecoder.DecodeJpeg(picture.GetImage());
+            }
 
-             //using (IsolatedStorageFile StorageFolder = IsolatedStorageFile.GetUserStoreForApplication())
-             //{
-             //    IsolatedStorageFileStream fs = StorageFolder.OpenFile(path, FileMode.Open, FileAccess.Read);
-             //    path = fs.Name;
-             //}
-
-             BitmapImage image = new BitmapImage(new Uri(path));
-             return image;
+            return bm;
         }
-
-
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo language)
         { throw new NotImplementedException(); }

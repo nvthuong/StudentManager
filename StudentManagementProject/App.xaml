@@ -10,6 +10,8 @@
     <!--Application Resources-->
     <Application.Resources>
         <converter:PathToImageConverter x:Key="ImageConverter"/>
+        <converter:MaleGenderConverter x:Key="MaleConverter"/>
+        <converter:FemaleGenderConverter x:Key="FemaleConverter"/>
         <local:LocalizedStrings xmlns:local="clr-namespace:StudentManagementProject" x:Key="LocalizedStrings"/>
         <Style x:Key="PhoneTextTitleHeaderStyle" TargetType="TextBlock" BasedOn="{StaticResource PhoneTextBlockBase}">
             <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiLight}" />
