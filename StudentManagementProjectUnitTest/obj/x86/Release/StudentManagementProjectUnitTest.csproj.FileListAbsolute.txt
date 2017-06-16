@@ -1,0 +1,6 @@
+D:\projects\mobile\wp\StudentManager\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.csprojResolveAssemblyReference.cache
+D:\projects\mobile\wp\StudentManager\StudentManagementProjectUnitTest\obj\x86\Release\App.g.cs
+D:\projects\mobile\wp\StudentManager\StudentManagementProjectUnitTest\obj\x86\Release\MainPage.g.cs
+D:\projects\mobile\wp\StudentManager\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.g.resources
+D:\projects\mobile\wp\StudentManager\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.Resources.AppResources.resources
+D:\projects\mobile\wp\StudentManager\StudentManagementProjectUnitTest\obj\x86\Release\StudentManagementProjectUnitTest.csproj.GenerateResource.Cache

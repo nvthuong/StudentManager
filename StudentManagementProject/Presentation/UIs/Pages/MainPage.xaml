@@ -178,10 +178,11 @@
                         <Grid x:Name="AddStudent" Background="Transparent" Grid.Row="3">
                             <Border BorderBrush="#FFE0E0E0" BorderThickness="0 0 0 1" />
                             <StackPanel Margin="20 10 0 5" VerticalAlignment="Bottom">
-                                <TextBlock Text="Add Student" 
+                                <TextBlock Text="Add Student"
+                                           Name="CreateStudent"
                                            Foreground="Black"  
                                            VerticalAlignment="Bottom" 
-                                           HorizontalAlignment="Left"  FontSize="18" />
+                                           HorizontalAlignment="Left"  FontSize="18" Tap="CreateStudent_Tap" />
                             </StackPanel>
                         </Grid>
                     </Grid>

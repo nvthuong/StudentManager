@@ -11,6 +11,8 @@ namespace StudentManagementProject.Domain.Entities
     {
         private int studentId;
         private String name;
+        private String email;
+        private String address;
         private String className;
         private String imgPath;
         private Boolean gender;
@@ -31,6 +33,31 @@ namespace StudentManagementProject.Domain.Entities
             set
             {
                 name = value;
+            }
+        }
+
+        public String Email
+        {
+            get
+            {
+                return email;
+            }
+            set
+            {
+                email = value;
+            }
+        }
+
+
+        public String Address
+        {
+            get
+            {
+                return address;
+            }
+            set
+            {
+                address = value;
             }
         }
 
@@ -64,6 +91,15 @@ namespace StudentManagementProject.Domain.Entities
             get { return gender; }
             set { gender = value; }
         }
+        public Student(String name, String email, String address, String className, String imgPath, Boolean gender)
+        {
+            this.name = name;
+            this.email = email;
+            this.address = address;
+            this.className = className;
+            this.imgPath = imgPath;
+            this.gender = gender;
+        }
 
         public Student(int id, String name, String className, String imgPath, Boolean gender)
         {
@@ -76,10 +112,11 @@ namespace StudentManagementProject.Domain.Entities
 
         public Student()
         {
-            this.studentId = -1;
-            this.name = "";
-            this.className = "";
-            this.imgPath = "";
+            this.name = "Nguyen Van Thuong";
+            this.address = "1 To Ky, Cong Vien Phan mem Quang Trung, TMA building";
+            this.email = "nvthuong@tma.com.vn";
+            this.className = "Class 1";
+            this.imgPath = "/Images/avata1.jpg";
             this.gender = true;
         }
     }

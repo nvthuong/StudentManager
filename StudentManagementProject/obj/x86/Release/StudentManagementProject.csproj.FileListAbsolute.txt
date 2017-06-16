@@ -1,0 +1,11 @@
+D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Release\StudentManagementProject.pdb
+D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Release\App.g.cs
+D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Release\Presentation\UIs\Pages\CreateStudent.g.cs
+D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Release\Presentation\UIs\Pages\LoginPage.g.cs
+D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Release\Presentation\UIs\Pages\MainPage.g.cs
+D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Release\Presentation\UIs\Pages\RegisPage.g.cs
+D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Release\Presentation\UIs\Pages\StudentListPage.g.cs
+D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Release\StudentManagementProject.g.resources
+D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Release\StudentManagementProject.Resources.AppResources.resources
+D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Release\StudentManagementProject.Resources.AppResources.vi-VN.resources
+D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Release\StudentManagementProject.csproj.GenerateResource.Cache

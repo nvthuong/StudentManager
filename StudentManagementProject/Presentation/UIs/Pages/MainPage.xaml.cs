@@ -52,5 +52,10 @@ namespace StudentManagementProject.Presentation.UIs.Pages
             NavigationService.Navigate(path);
         }
 
+        private void CreateStudent_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Presentation/UIs/Pages/CreateStudent.xaml", UriKind.RelativeOrAbsolute));
+        }
+
     }
 }

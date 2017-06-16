@@ -124,6 +124,12 @@
     <Compile Include="Presentation\Systems\ToastMaker.cs" />
     <Compile Include="Presentation\UIs\Converters\PathToImageConverter.cs" />
     <Compile Include="Presentation\UIs\Customs\Drawer\DrawerLayout.cs" />
+    <Compile Include="Presentation\UIs\Pages\CreateStudent.xaml.cs">
+      <DependentUpon>CreateStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\UIs\Pages\ListStudentPage.xaml.cs">
+      <DependentUpon>ListStudentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\UIs\Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -151,6 +157,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="Presentation\UIs\Pages\CreateStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\UIs\Pages\ListStudentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Presentation\UIs\Pages\LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -178,6 +192,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\AppBar\add.png" />
+    <Content Include="Assets\AppBar\save.png" />
+    <Content Include="Assets\back.png" />
     <Content Include="Assets\bart.jpg" />
     <Content Include="Assets\icon_user.png" />
     <Content Include="Assets\ic_drawer.png" />
@@ -220,6 +237,7 @@
     <EmbeddedResource Include="Resources\AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\AppResources.vi-VN.resx" />
   </ItemGroup>
