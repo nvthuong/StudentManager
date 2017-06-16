@@ -1,32 +1,3 @@
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\Assets\ApplicationIcon.png
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\Assets\Tiles\FlipCycleTileLarge.png
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\Assets\Tiles\FlipCycleTileMedium.png
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\Assets\Tiles\FlipCycleTileSmall.png
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\Assets\Tiles\IconicTileMediumLarge.png
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\Assets\Tiles\IconicTileSmall.png
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\StudentManagementProjectUnitTest.dll
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\StudentManagementProjectUnitTest.pdb
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\AppManifest.xaml
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\Properties\WMAppManifest.xml
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\StudentManagementProjectUnitTest_Debug_x86.xap
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\Microsoft.VisualStudio.TestPlatform.Core.dll
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\Microsoft.VisualStudio.TestPlatform.TestExecutor.Core.dll
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\Microsoft.VisualStudio.TestPlatform.UnitTestFramework.dll
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\vstest_executionengine_platformbridge.winmd
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\StudentManagementProject.dll
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\Sqlite.winmd
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\StudentManagementProject.pdb
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\Sqlite.dll
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Debug\StudentManagementProjectUnitTest.csprojResolveAssemblyReference.cache
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Debug\App.g.cs
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Debug\MainPage.g.cs
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Debug\StudentManagementProjectUnitTest.g.resources
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Debug\StudentManagementProjectUnitTest.Resources.AppResources.resources
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Debug\StudentManagementProjectUnitTest.csproj.GenerateResource.Cache
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Debug\StudentManagementProjectUnitTest.dll
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Debug\StudentManagementProjectUnitTest.pdb
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\obj\x86\Debug\XapCacheFile.xml
-C:\Users\nahuy\documents\visual studio 2013\Projects\StudentManagementProject\StudentManagementProjectUnitTest\Bin\x86\Debug\vi-VN\StudentManagementProject.resources.dll
 D:\project\StudentManager\StudentManagementProjectUnitTest\Bin\x86\Debug\Assets\ApplicationIcon.png
 D:\project\StudentManager\StudentManagementProjectUnitTest\Bin\x86\Debug\Assets\Tiles\FlipCycleTileLarge.png
 D:\project\StudentManager\StudentManagementProjectUnitTest\Bin\x86\Debug\Assets\Tiles\FlipCycleTileMedium.png

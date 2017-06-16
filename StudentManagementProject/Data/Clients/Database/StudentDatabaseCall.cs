@@ -32,7 +32,7 @@ namespace StudentManagementProject.Data.Clients.Database
             set { range = value; }
         }
 
-        private StudentDatabaseCall() { }
+        public StudentDatabaseCall() { }
 
         public static StudentDatabaseCall getInstance()
         {
