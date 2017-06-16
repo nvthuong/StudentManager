@@ -25,8 +25,10 @@
                     </Grid.ColumnDefinitions>
                     <Grid Margin="20">
                         <Image
-                            DataContext="{Binding ImagePath, Converter={StaticResource ImageConverter}}"
-                            Source="{Binding ImagePath}"/>
+                            Stretch="Uniform" 
+                            Source="{Binding ImagePath, Converter={StaticResource ImageConverter}}" 
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"/>
                     </Grid>
                     <Grid
                         Grid.Column="1" Tap="Grid_Tap">
@@ -82,20 +84,42 @@
     </toolkit:TransitionService.NavigationOutTransition>
     
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="Black">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBox Name="Search" TextChanged="Search_TextChanged" />
-        </StackPanel>
+        <Grid Grid.Row="0" Margin="0,17,-12,28">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <TextBox 
+                     Grid.Column="0"
+                     Name="Search" 
+                     TextChanged="Search_TextChanged" />
+            <Button Grid.Column="1" Width="100"
+                    Background="Gray" BorderThickness="0"
+                    Click="Button_Click"
+                    Margin="-36,0,0,0">
+                <Image Source="/Assets/ic_search.png"/>
+            </Button>
+        </Grid>
+        
+        <TextBlock Name="NoResult"
+                   Grid.Row="1"
+                   Height="0"
+                   Text="No result found"
+                   Margin="10,0,0,10" />
 
         <!--Double line list with text wrapping-->
-        <phone:LongListSelector Margin="10,0,0,10" 
-                                Grid.Row="1"
+        <phone:LongListSelector 
+                                Name="StudentL"
+                                Margin="10,0,0,10" 
+                                Grid.Row="2"
                                 ItemsSource="{Binding Students}"
                                 ItemTemplate="{StaticResource StudentLayoutTemplate}" SelectionChanged="LongListSelector_SelectionChanged"/>
 

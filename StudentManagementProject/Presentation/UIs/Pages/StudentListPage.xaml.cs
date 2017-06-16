@@ -11,13 +11,16 @@ using StudentManagementProject.Presentation.UIs.ViewModels;
 using System.Windows.Data;
 using System.Windows.Media.Imaging;
 using StudentManagementProject.Domain.Entities;
+using System.IO.IsolatedStorage;
+using System.IO;
+using StudentManagementProject.Data.Clients.Database;
 
 namespace StudentManagementProject.Presentation.UIs.Pages
 {
     public partial class StudentListPage : PhoneApplicationPage, StudentSearchViewModel.StudentPageViewSurface
     {
-
         StudentSearchViewModel studentSearchViewModel = null;
+        Student student;
 
         public StudentSearchViewModel StudentSearchViewModel
         {
@@ -35,16 +38,19 @@ namespace StudentManagementProject.Presentation.UIs.Pages
         public StudentListPage()
         {
             InitializeComponent();
-            LayoutRoot.DataContext = StudentSearchViewModel;   
+            LayoutRoot.DataContext = StudentSearchViewModel;
         }
 
         public void onQueryFail()
         {
-            MessageBox.Show("Can't find any result");
+            NoResult.Height = 50;
+            StudentL.ItemsSource.Clear();
         }
 
         private void Search_TextChanged(object sender, TextChangedEventArgs e)
         {
+            NoResult.Height = 0;
+
             TextBox value = sender as TextBox;
 
             studentSearchViewModel.queryStudent(value.Text);
@@ -52,9 +58,8 @@ namespace StudentManagementProject.Presentation.UIs.Pages
 
         private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            
         }
-        Student student;
+
         private void LongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             LongListSelector select = sender as LongListSelector;
@@ -66,12 +71,17 @@ namespace StudentManagementProject.Presentation.UIs.Pages
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             // NavigationEventArgs returns destination page
-            ModifyStudent objStudent = e.Content as ModifyStudent;
-            if (objStudent != null)
+            ModifyStudent destinationPage = e.Content as ModifyStudent;
+            if (destinationPage != null)
             {
                 // Change property of destination page
-                objStudent.setDataContext(student);
+                destinationPage.setDataContext(student);
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            studentSearchViewModel.queryStudent(Search.Text);
         }
 
     }

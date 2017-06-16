@@ -24,7 +24,9 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0">
             <toolkit:WrapPanel HorizontalAlignment="Left">
-                <Image Name="btnBack" Source="/Assets/back.png" Width="40" Height="40" VerticalAlignment="Center" Margin="12,0,0,0"/>
+                <Image Name="btnBack" Source="/Assets/back.png" 
+                       Width="40" Height="40" VerticalAlignment="Center" 
+                       Margin="12,0,0,0" Tap="btnBack_Tap"/>
                 <TextBlock Text="Modify Student" FontSize="40" Margin="20,0,0,0" VerticalAlignment="Center"/>
             </toolkit:WrapPanel>
 
@@ -33,7 +35,11 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Margin="12,0,12,0" Grid.Row="1">
             <StackPanel Grid.Row="0" Name="StudentInfo">
-                <Image x:Name="StudentImage" Source="/Assets/ic_image.png" Width="200" Height="200" Stretch="Fill" Margin="0,0,0,0">
+                <Image x:Name="StudentImage" 
+                       Source="{Binding ImagePath, Converter={StaticResource ImageConverter}}"
+                       Width="200" Height="200" 
+                       Stretch="Fill" Margin="0,0,0,0"
+                       Tap="StudentImage_Tap">
                     <Image.OpacityMask>
                         <RadialGradientBrush GradientOrigin="0.5,0.5"
             				Center="0.5,0.5"
@@ -44,13 +50,28 @@
                         </RadialGradientBrush>
                     </Image.OpacityMask>
                 </Image>
-                <toolkit:PhoneTextBox x:Name="txtFullName" Hint="Full name" Grid.Row="0" Margin="0,10,0,0" Text="{Binding Name}"/>
-                <toolkit:PhoneTextBox x:Name="txtEmail" Hint="Email" Grid.Row="0" Margin="0,10,0,0" Text="{Binding Email}"/>
-                <toolkit:PhoneTextBox x:Name="txtAddress" Hint="Address" Grid.Row="0" Margin="0,10,0,0" Text="{Binding Address}"/>
-                <toolkit:ListPicker x:Name="dropClass" SelectionMode="Single" Header="Select a class"  />
-                <toolkit:WrapPanel x:Name="radioSex" HorizontalAlignment="Right">
-                    <RadioButton Name="radioMale" GroupName="sex" Content="Male" />
-                    <RadioButton Name="radioFemale" GroupName="sex" Content="Female"/>
+                <toolkit:PhoneTextBox x:Name="txtFullName" 
+                                      Hint="Full name" Grid.Row="0" 
+                                      Margin="0,10,0,0" Text="{Binding Name}"/>
+                <toolkit:PhoneTextBox x:Name="txtEmail"
+                                      Hint="Email" Grid.Row="0" 
+                                      Margin="0,10,0,0" Text="{Binding Email}"/>
+                <toolkit:PhoneTextBox x:Name="txtAddress" Hint="Address" 
+                                      Grid.Row="0" Margin="0,10,0,0" 
+                                      Text="{Binding Address}"/>
+                <toolkit:ListPicker x:Name="dropClass" SelectionMode="Single" 
+                                    Header="Select a class"
+                                    SelectedItem="{Binding ClassName}"/>
+                <toolkit:WrapPanel x:Name="radioSex" 
+                                   HorizontalAlignment="Right">
+                    <RadioButton Name="radioMale" GroupName="sex" 
+                                 Content="Male" IsChecked="{Binding Gender, 
+                        Converter={StaticResource MaleConverter}}"
+                                  Click="radioGender_Click"/>
+                    <RadioButton Name="radioFemale" GroupName="sex" Content="Female" 
+                                 IsChecked="{Binding Gender, 
+                        Converter={StaticResource FemaleConverter}}"
+                                  Click="radioGender_Click"/>
                 </toolkit:WrapPanel>
             </StackPanel>
         </Grid>
@@ -60,6 +81,7 @@
         <shell:ApplicationBar IsVisible="True" 
                               IsMenuEnabled="True">
             <shell:ApplicationBarIconButton
+                Click="ModifyStudent_Click"
                 IconUri="/Assets/AppBar/save.png" 
                 Text="Create student"/>
         </shell:ApplicationBar>

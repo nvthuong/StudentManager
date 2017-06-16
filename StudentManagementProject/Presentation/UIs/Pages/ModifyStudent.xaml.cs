@@ -8,12 +8,15 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using StudentManagementProject.Domain.Entities;
+using Microsoft.Phone.Tasks;
+using StudentManagementProject.Data.Clients.Database;
 
 namespace StudentManagementProject.Presentation.UIs.Pages
 {
     public partial class ModifyStudent : PhoneApplicationPage
     {
-
+        StudentDatabaseCall db = StudentDatabaseCall.getInstance();
+        private PhotoChooserTask photoChooserTask;
         private Student student;
 
         public Student Student
@@ -25,20 +28,60 @@ namespace StudentManagementProject.Presentation.UIs.Pages
         public ModifyStudent()
         {
             InitializeComponent();
+            dropClass.Items.Add("Class 1");
+            dropClass.Items.Add("Class 2");
+            dropClass.Items.Add("Class 3");
+            photoChooserTask = new PhotoChooserTask();
+            photoChooserTask.Completed += photoChooserTask_Completed;
+        }
+
+        void photoChooserTask_Completed(object sender, PhotoResult e)
+        {
+            if (e.TaskResult == TaskResult.OK)
+            {
+                student.ImagePath = e.OriginalFileName;
+                System.Windows.Media.Imaging.BitmapImage bmp = new System.Windows.Media.Imaging.BitmapImage();
+                bmp.SetSource(e.ChosenPhoto);
+                StudentImage.Source = bmp;
+            }
         }
 
         public void setDataContext(Student student)
         {
             this.student = student;
             StudentInfo.DataContext = this.student;
-            if (student.Gender)
+            dropClass.DataContext = this.student;
+        }
+
+        private void btnBack_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            PhoneApplicationFrame frame = Application.Current.RootVisual as PhoneApplicationFrame;
+            frame.GoBack();
+        }
+
+        private void StudentImage_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            photoChooserTask.Show();
+        }
+
+        private void radioGender_Click(object sender, RoutedEventArgs e)
+        {
+            student.Gender = radioMale.IsChecked.Value;
+        }
+
+        private void ModifyStudent_Click(object sender, EventArgs e)
+        {
+            student.Name = txtFullName.Text;
+            student.Address = txtAddress.Text;
+            student.ClassName = dropClass.SelectedItem.ToString();
+            student.Email = txtEmail.Text;
+            Boolean hasCreated = db.modifyStudent(student);
+            if (hasCreated)
             {
-                radioMale.IsChecked = true;
+                Uri path = new Uri("/Presentation/UIs/Pages/MainPage.xaml", UriKind.RelativeOrAbsolute);
+                NavigationService.Navigate(path);
             }
-            else
-            {
-                radioFemale.IsChecked = true;
-            }
+
         }
     }
 }
