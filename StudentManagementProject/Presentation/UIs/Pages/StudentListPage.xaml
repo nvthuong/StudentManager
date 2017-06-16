@@ -29,7 +29,7 @@
                             Source="{Binding ImagePath}"/>
                     </Grid>
                     <Grid
-                        Grid.Column="1">
+                        Grid.Column="1" Tap="Grid_Tap">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="*"/>
@@ -90,15 +90,14 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBox Name="Search" TextChanged="Search_TextChanged" />
         </StackPanel>
 
         <!--Double line list with text wrapping-->
         <phone:LongListSelector Margin="10,0,0,10" 
                                 Grid.Row="1"
                                 ItemsSource="{Binding Students}"
-                                ItemTemplate="{StaticResource StudentLayoutTemplate}"/>
+                                ItemTemplate="{StaticResource StudentLayoutTemplate}" SelectionChanged="LongListSelector_SelectionChanged"/>
 
     </Grid>
 

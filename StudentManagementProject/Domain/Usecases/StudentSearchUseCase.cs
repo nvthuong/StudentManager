@@ -23,10 +23,12 @@ namespace StudentManagementProject.Domain.Usecases
             studentRpSamples = new List<StudentRepository>();
             studentRpSamples.Add(new StudentSearchByNameRepoImp());
             studentRpSamples.Add(new StudentSearchByClassRepoImp());
+
         }
 
         public async void searchAll()
         {
+            studentRPos = studentRpSamples[0];
             List<Student> studentList = await studentRPos.performSearch();
             if (studentList.Count > 0)
             {

@@ -25,6 +25,7 @@ namespace StudentManagementProject.Presentation.UIs.ViewModels
         {
             studentSearchUseCase = new StudentSearchUseCase(this);
             studentPageViewCallback = callback;
+            Students = new ObservableCollection<Student>();
         }
 
         public void queryStudent(String key)

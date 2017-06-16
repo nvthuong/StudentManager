@@ -168,3 +168,4 @@ D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Debug\Stud
 D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Debug\StudentManagementProject.pdb
 D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Debug\XapCacheFile.xml
 D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Debug\Presentation\UIs\Pages\ListStudentPage.g.cs
+D:\projects\mobile\wp\StudentManager\StudentManagementProject\obj\x86\Debug\Presentation\UIs\Pages\ModifyStudent.g.cs
