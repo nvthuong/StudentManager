@@ -10,6 +10,7 @@ using Microsoft.Phone.Shell;
 using StudentManagementProject.Data.Clients.Database;
 using StudentManagementProject.Domain.Entities;
 using Microsoft.Phone.Tasks;
+using StudentManagementProject.Presentation.Presenters;
 
 namespace StudentManagementProject.Presentation.UIs.Pages
 {
@@ -22,6 +23,9 @@ namespace StudentManagementProject.Presentation.UIs.Pages
         {
             InitializeComponent();
             student = new Student();
+            dropClass.Items.Add("Class 1");
+            dropClass.Items.Add("Class 2");
+            dropClass.Items.Add("Class 3");
             photoChooserTask = new PhotoChooserTask();
             photoChooserTask.Completed += photoChooserTask_Completed;
         }
@@ -41,6 +45,7 @@ namespace StudentManagementProject.Presentation.UIs.Pages
         {
             student.Name = txtFullName.Text;
             student.Address = txtAddress.Text;
+            student.ClassName = dropClass.SelectedItem.ToString();
             student.Email = txtEmail.Text;
             Boolean hasCreated = db.addStudent(student);
             if (hasCreated)

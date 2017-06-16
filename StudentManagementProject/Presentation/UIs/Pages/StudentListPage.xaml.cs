@@ -10,6 +10,7 @@ using Microsoft.Phone.Shell;
 using StudentManagementProject.Presentation.UIs.ViewModels;
 using System.Windows.Data;
 using System.Windows.Media.Imaging;
+using StudentManagementProject.Domain.Entities;
 
 namespace StudentManagementProject.Presentation.UIs.Pages
 {
@@ -40,6 +41,37 @@ namespace StudentManagementProject.Presentation.UIs.Pages
         public void onQueryFail()
         {
             MessageBox.Show("Can't find any result");
+        }
+
+        private void Search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox value = sender as TextBox;
+
+            studentSearchViewModel.queryStudent(value.Text);
+        }
+
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            
+        }
+        Student student;
+        private void LongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            LongListSelector select = sender as LongListSelector;
+            student  = select.SelectedItem as Student;
+            Uri path = new Uri("/Presentation/UIs/Pages/ModifyStudent.xaml", UriKind.RelativeOrAbsolute);
+            NavigationService.Navigate(path);
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            // NavigationEventArgs returns destination page
+            ModifyStudent objStudent = e.Content as ModifyStudent;
+            if (objStudent != null)
+            {
+                // Change property of destination page
+                objStudent.setDataContext(student);
+            }
         }
 
     }

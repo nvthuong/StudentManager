@@ -117,6 +117,7 @@
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="Presentation\Presenters\LoginPresenter.cs" />
     <Compile Include="Presentation\Presenters\RegisterPresenter.cs" />
+    <Compile Include="Presentation\Presenters\StudentPresenter.cs" />
     <Compile Include="Presentation\Presenters\UserPresenter.cs" />
     <Compile Include="Presentation\Systems\CheckInputUtils.cs" />
     <Compile Include="Presentation\Systems\CheckImgPathUtils.cs" />
@@ -135,6 +136,9 @@
     </Compile>
     <Compile Include="Presentation\UIs\Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\UIs\Pages\ModifyStudent.xaml.cs">
+      <DependentUpon>ModifyStudent.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presentation\UIs\Pages\RegisPage.xaml.cs">
       <DependentUpon>RegisPage.xaml</DependentUpon>
@@ -170,6 +174,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Presentation\UIs\Pages\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\UIs\Pages\ModifyStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
